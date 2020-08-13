@@ -22,7 +22,8 @@ Use `~/api/user/<ID Document>` to return specific user by ID document (CC).
 3) Add `Content-Type: application/json` and `Accept: application/json` to the headers.
 
 4) Finally, add a body with the following structure:
-`{
+```
+{
     "title": [
         {
             "value": "Test 4"
@@ -63,11 +64,12 @@ Use `~/api/user/<ID Document>` to return specific user by ID document (CC).
             "target_id": "user"
         }
     ]
-}`
+}
+```
 
 ### Using cURL
 
-`
+```
 curl --location --request POST 'indra.local/entity/node?_format=json' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
@@ -115,4 +117,4 @@ curl --location --request POST 'indra.local/entity/node?_format=json' \
         }
     ]
 }'
-`
+```
