@@ -79,7 +79,7 @@ class User extends ResourceBase {
           $response->addCacheableDependency($data);
           return $response;
       } else {
-        $response = new ResourceResponse('No document found', 401);
+        $response = new ResourceResponse('User ' . $id . ' not found', 401);
         return $response;
       }
     }
