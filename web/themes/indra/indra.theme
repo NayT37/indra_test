@@ -1,0 +1,83 @@
+<?php
+/*
+Take it from here:
+  https://www.drupal.org/project/drupal/issues/2405503
+And here:
+  https://www.drupal.org/node/2420295
+
+  I was trying to implement the exact same problem with the title lenght and, it it worked, 
+  I would use the same process to capture the birthdate year and make the custom validation.
+ */
+
+
+ /**
+ * Implements hook_node_submit().
+ *
+ * Article titles may no exceed 3 chars.
+ */
+function indra_node_submit(\Drupal\node\NodeInterface $node, $form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $node_type = $node->type->target_id;
+  if ($node_type == 'user') {
+    if (strlen($node->getTitle()) > 3) {
+     $form_state->setErrorByName('title', t('Title must contain 3 or less characters.'));
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_presave().
+ *
+ * Article titles may no exceed 3 chars.
+ * Only trigger on node:article:PATCH method as Form validation
+ * is done through example_rest_validate_node_submit()
+ *
+ * @see example_rest_validate_node_submit()
+ */
+function indra_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  $method = \Drupal::request()->getMethod();
+  if ($method == 'POST') {
+    $entity_type = $entity->getEntityTypeId();
+    if ($entity_type == 'node') {
+      $entity_bundle = $entity->type->target_id;
+      if ($entity_bundle == 'user') {
+        if (strlen($entity->getTitle()) > 3) {
+          $form_state->setErrorByName('title', t('Title must contain 3 or less characters.'));
+          // really throw an exception?
+          // throw new HttpException(422, t('Title must contain 3 or less characters.'));
+        }
+      }
+    }
+  }
+}
+
+
+
+/*
+// Implements HOOK_form_BASE_FORM_ID_alter
+function indra_form_node_form_alter(&$form, FormStateInterface $form_state)
+{
+  // For entity builders.
+  $form['#entity_builders'][] = 'indra_node_builder';
+  // For submit callbacks.
+  $form['actions']['submit']['#submit'][] = 'indra_node_form_submit';
+}
+
+function indra_node_builder($entity_type, NodeInterface $node, &$form, FormStateInterface $form_state)
+{
+  $parent = $form_state->getValue('menu', 'parent');
+  if ($parent) {
+    list($node->menu['menu_name'], $node->menu['plid']) = explode(':', $parent);
+  }
+}
+
+function indra_node_form_submit($form, FormStateInterface $form_state)
+{
+  $node = $form_state->getFormObject()->getEntity();
+  indra_validate_field($node);
+}
+
+function indra_validate_field($node)
+{
+  print("Hello is this thing on?");
+}
+*/

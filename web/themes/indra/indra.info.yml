@@ -1,0 +1,14 @@
+name: Indra
+type: theme
+description: 'Indra site theme'
+package: Indra
+core: 8.x
+base theme: bartik
+
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
