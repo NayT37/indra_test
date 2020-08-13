@@ -1,6 +1,6 @@
 # Indra Test
 
-Download repository and run `composer install`.
+Download repository change branch to `dev` and then run `composer install`.
 
 Create `settings.php` and `settings.local.php` in order to make it work.
 
