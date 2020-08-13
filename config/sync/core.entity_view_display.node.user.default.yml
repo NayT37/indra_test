@@ -1,0 +1,76 @@
+uuid: 0be7c1f5-8a36-4d40-a593-b95d76bde509
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.user.field_birthdate
+    - field.field.node.user.field_email
+    - field.field.node.user.field_id_doc
+    - field.field.node.user.field_last_name
+    - field.field.node.user.field_name
+    - field.field.node.user.field_phone
+    - node.type.user
+  module:
+    - datetime
+    - user
+id: node.user.default
+targetEntityType: node
+bundle: user
+mode: default
+content:
+  field_birthdate:
+    weight: 107
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_email:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_id_doc:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_last_name:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

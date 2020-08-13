@@ -1,0 +1,23 @@
+uuid: bd2b3c71-e018-4955-9ac3-b7e74b900fa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.user
+id: node.user.field_phone
+field_name: field_phone
+entity_type: node
+bundle: user
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
