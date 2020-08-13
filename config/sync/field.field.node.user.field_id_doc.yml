@@ -1,0 +1,23 @@
+uuid: a879db19-76e7-47f0-bdcf-6a995edd2b95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_id_doc
+    - node.type.user
+id: node.user.field_id_doc
+field_name: field_id_doc
+entity_type: node
+bundle: user
+label: 'ID Document'
+description: 'Identification Document (CC)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
