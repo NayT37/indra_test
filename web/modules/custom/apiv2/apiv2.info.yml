@@ -1,0 +1,6 @@
+name: Api V2
+description: 'Custom REST API to validate information'
+package: Custom
+type: module
+version: 1.0
+core: 8.x
