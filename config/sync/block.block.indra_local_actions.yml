@@ -1,0 +1,20 @@
+uuid: 94b36033-ec99-4ad7-a066-4fc7e3f0702d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - indra
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: indra_local_actions
+theme: indra
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

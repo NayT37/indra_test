@@ -1,0 +1,22 @@
+uuid: 26164b36-32ea-4c44-922f-bf89f7f6ada2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - indra
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: indra_breadcrumbs
+theme: indra
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
