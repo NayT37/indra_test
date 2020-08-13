@@ -1,0 +1,19 @@
+uuid: 017f1b02-d760-455c-8f48-d4341c27e044
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.user
+id: node.user.field_email
+field_name: field_email
+entity_type: node
+bundle: user
+label: E-mail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
