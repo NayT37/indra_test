@@ -1,0 +1,17 @@
+uuid: 3fc1c435-4daf-49f6-a193-308ba68718cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - apiv2
+    - serialization
+    - user
+id: user
+plugin_id: user
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
