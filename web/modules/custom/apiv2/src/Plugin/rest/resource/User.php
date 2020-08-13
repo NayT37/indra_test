@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
  *   id = "user",
  *   label = @Translation("User"),
  *   uri_paths = {
- *     "canonical" = "/apiv2/user/{id}"
+ *     "canonical" = "/api/v2/user/{id}"
  *   }
  * )
  */

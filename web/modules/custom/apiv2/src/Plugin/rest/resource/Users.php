@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
  *   id = "endpoint",
  *   label = @Translation("Users"),
  *   uri_paths = {
- *     "canonical" = "/apiv2/user"
+ *     "canonical" = "/api/v2/user"
  *   }
  * )
  */
