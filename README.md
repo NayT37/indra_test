@@ -7,10 +7,10 @@ Create `settings.php` and `settings.local.php` in order to make it work.
 SQL dump it's inside the code. Connect DB.
 
 ## GET ALL
-Use `~/api/user` to return all users.
+Use `~/api/v2/user` to return all users.
 
 ## GET SINGLE
-Use `~/api/user/<ID Document>` to return specific user by ID document (CC).
+Use `~/api/v2/user/<ID Document>` to return specific user by ID document (CC).
 
 ## POST
 
